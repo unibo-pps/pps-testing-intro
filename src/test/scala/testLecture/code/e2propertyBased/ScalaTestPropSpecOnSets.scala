@@ -1,4 +1,4 @@
-package testLecture.code.e3propertyBased
+package testLecture.code.e2propertyBased
 
 import org.scalacheck.{Gen, Prop}
 import org.scalatestplus.scalacheck.Checkers

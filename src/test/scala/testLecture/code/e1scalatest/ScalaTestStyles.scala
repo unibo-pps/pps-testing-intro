@@ -57,7 +57,7 @@ class BasicFunSpec extends AnyFunSpec with Matchers:
   }
 
 
-import org.scalatest.matchers.must.{ Matchers as MustMatchers }
+import org.scalatest.matchers.must.Matchers as MustMatchers
 
 class StringSuite extends AnyFunSuite with MustMatchers:
   test("Some check with regex") {

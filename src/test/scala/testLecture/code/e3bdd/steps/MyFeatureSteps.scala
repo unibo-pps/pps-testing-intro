@@ -1,4 +1,4 @@
-package testLecture.code.e4bdd.steps
+package testLecture.code.e3bdd.steps
 
 import io.cucumber.scala.{EN, ScalaDsl}
 import org.junit.jupiter.api.Assertions

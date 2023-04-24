@@ -1,4 +1,4 @@
-package testLecture.code.e4bdd
+package testLecture.code.e3bdd
 
 import org.scalatest.GivenWhenThen
 import org.scalatest.featurespec.AnyFeatureSpec
