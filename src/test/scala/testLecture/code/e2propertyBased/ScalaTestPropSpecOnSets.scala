@@ -14,16 +14,18 @@ class SetSpec extends AnyPropSpec with TableDrivenPropertyChecks with Checkers w
 
   property("an empty Set should have size 0") {
     // ScalaTest's property-based testing style
-    forAll(examples) { set => set.size should be (0) }
+    forAll(examples)(set => set.size should be(0))
     // ScalaCheck's property-based testing style
-    check { Prop.forAll(examplesGen) { set => set.size == 0 } }
+    check(Prop.forAll(examplesGen)(set => set.size == 0))
   }
 
   property("invoking head on an empty set should produce NoSuchElementException") {
     // ScalaTest's property-based testing style
-    forAll(examples) { set => a [NoSuchElementException] should be thrownBy{set.head} }
+    forAll(examples)(set => a[NoSuchElementException] should be thrownBy set.head)
     // ScalaCheck's property-based testing style
-    check { Prop.forAll(examplesGen) { set =>
-      Prop.throws(classOf[NoSuchElementException])(set.head) }
+    check {
+      Prop.forAll(examplesGen) { set =>
+        Prop.throws(classOf[NoSuchElementException])(set.head)
+      }
     }
   }

@@ -47,7 +47,7 @@ class BasicFunSpec extends AnyFunSpec with Matchers:
       }
     }
 
-    describe(" when not empty"){
+    describe(" when not empty") {
       pending
     }
   }
@@ -55,7 +55,6 @@ class BasicFunSpec extends AnyFunSpec with Matchers:
   describe("Two sets") {
     pending
   }
-
 
 import org.scalatest.matchers.must.Matchers as MustMatchers
 
@@ -65,4 +64,4 @@ class StringSuite extends AnyFunSuite with MustMatchers:
   }
 
 class ScalaTestExampleWithoutRunWithAnnotation extends AnyFunSuite:
-  test("simple test"){ }
+  test("simple test") {}

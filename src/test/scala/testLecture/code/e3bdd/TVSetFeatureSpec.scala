@@ -29,5 +29,5 @@ class TVSetSpec extends AnyFeatureSpec with GivenWhenThen:
     }
   }
 
-  Scenario("User presses power button when TV is on") { pending }
+  Scenario("User presses power button when TV is on")(pending)
 end TVSetSpec
