@@ -13,4 +13,3 @@ jobs:
             distribution: temurin
             java-version: 11
         - run: sbt "testOnly *testLecture*"
-        - run: ./gradlew test
