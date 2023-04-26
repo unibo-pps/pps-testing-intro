@@ -1,5 +1,3 @@
-ThisBuild / resolvers += Resolver.jcenterRepo
-
 val junitJupiterVersion = "5.9.2"
 
 lazy val root = (project in file("."))

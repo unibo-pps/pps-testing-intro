@@ -1,9 +1,12 @@
 package testLecture.code.e1scalatest
 
+import org.scalatest.BeforeAndAfterEach
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
+
+import java.io.{BufferedReader, InputStreamReader}
 
 class BasicTest extends AnyFunSuite with Matchers:
   test("Simple test") {
@@ -65,3 +68,19 @@ class StringSuite extends AnyFunSuite with MustMatchers:
 
 class ScalaTestExampleWithoutRunWithAnnotation extends AnyFunSuite:
   test("simple test") {}
+
+class ScalaTestBeforeEach extends AnyFunSuite with BeforeAndAfterEach with Matchers:
+  var file: BufferedReader = _
+  override def beforeEach(): Unit =
+    file = BufferedReader(InputStreamReader(getClass.getClassLoader.getResourceAsStream("foo.txt")))
+
+  override def afterEach(): Unit =
+    file.close()
+
+  test("foo test") {
+    file.readLine() shouldBe "10"
+  }
+
+  test("another test") {
+    file.readLine().toInt shouldBe 10
+  }
